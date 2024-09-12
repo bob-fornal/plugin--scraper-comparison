@@ -28,7 +28,10 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.json"
+              "src/manifest.json",
+              "src/background.js",
+              "src/content-script.js",
+              "src/styles.css"
             ],
             "styles": [
               "src/styles.scss"
@@ -97,7 +100,10 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.json"
+              "src/manifest.json",
+              "src/background.js",
+              "src/content-script.js",
+              "src/styles.css"
             ],
             "styles": [
               "src/styles.scss"

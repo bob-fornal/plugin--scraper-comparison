@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Your App Description",
   "manifest_version": 3,
-  "key": "Your App Key (This is available after you upload package to chrome web store",
+  "key": "none",
   "action": {
     "default_title": "Title",
     "default_popup": "index.html",
@@ -39,7 +39,7 @@
   "content_scripts": [
     {
       "matches": [
-        "YOUR URLS"
+        "*://*/*"
       ],
       "css": [
         "styles.css"

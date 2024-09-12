@@ -1,7 +1,7 @@
 module.exports = {
   entry: {
-    background: 'src/background.ts',
-    'content-script': 'src/content-script.ts',
+    background: 'src/background.js',
+    'content-script': 'src/content-script.js',
   },
   optimization: {
     runtimeChunk: false,

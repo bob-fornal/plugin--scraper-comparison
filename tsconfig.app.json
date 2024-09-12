@@ -7,8 +7,8 @@
   },
   "files": [
     "src/main.ts",
-    "src/background.ts",
-    "src/content-script.ts"
+    "src/background.js",
+    "src/content-script.js"
   ],
   "include": [
     "src/**/*.d.ts"
