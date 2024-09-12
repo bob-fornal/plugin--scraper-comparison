@@ -1,0 +1,53 @@
+{
+  "name": "Scraper Comparison Tool",
+  "version": "1.0.0",
+  "description": "Your App Description",
+  "manifest_version": 3,
+  "key": "none",
+  "action": {
+    "default_title": "Title",
+    "default_popup": "index.html",
+    "default_icon": "assets/images/favicon-16x16.png"
+  },
+  "icons": {
+    "32": "assets/images/favicon-32x32.png",
+    "48": "assets/images/favicon-48x48.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "index.html",
+        "assets/images/*",
+        "main.js",
+        "*.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
