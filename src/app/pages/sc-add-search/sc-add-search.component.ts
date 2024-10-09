@@ -20,19 +20,20 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class ScAddSearchComponent {
   public name: string = '';
+  public pattern: string = '';
 
   public saveSearch() {
     const saveName: string = this.name
       .replace(/[^a-zA-Z0-9\s]/g, '')
       .replace(/[\s]/g, '-')
       .toLowerCase();
-    this.updateSearchList(this.name, saveName);
+    this.updateSearchList(this.name, saveName, this.pattern);
   }
 
-  private updateSearchList(name: string, saveName: string) {
+  private updateSearchList(name: string, saveName: string, pattern: string) {
     const item = localStorage.getItem('scraper-list');
     const list = item === null ? [] : JSON.parse(item);
-    list.push({ name, saveName });
+    list.push({ name, saveName, pattern });
     localStorage.setItem('scraper-list', JSON.stringify(list));
     return list;
   }

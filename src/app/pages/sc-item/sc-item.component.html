@@ -1,1 +1,4 @@
-{{saveName}}
+<div>
+  {{saveName}} <button (click)="trigger()">Trigger</button>
+</div>
+<div *ngFor="let item of content">{{ item }}</div>

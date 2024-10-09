@@ -4,6 +4,10 @@
       <mat-label>Search Name</mat-label>
       <input matInput placeholder="Search Name" value="" [(ngModel)]="name" />
     </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Search Pattern</mat-label>
+      <input matInput placeholder="Search Pattern" value="" [(ngModel)]="pattern" />
+    </mat-form-field>
     <button mat-flat-button color="primary" (click)="saveSearch()">Save</button>
   </form>
 </div>
