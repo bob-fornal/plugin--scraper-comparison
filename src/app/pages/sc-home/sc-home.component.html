@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h6>Searches</h6>
+  @for (item of getSearchList(); track item.saveName) {
+    <div class="item">
+      <a class="link-only" [routerLink]="getItemUrl(item.saveName)" routerLinkActive="active">{{ item.name }}</a>
+    </div>
+  } @empty {
+    <div class="item">
+      No items found.
+    </div>
+  }
+</div>
